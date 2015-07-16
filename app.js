@@ -1,29 +1,26 @@
 
-  //javascript
   $(document).ready(function() {
-  
-  
- $('.box').on('click', function() {
-    $('.box').addClass('white');
-  })
+  var color = 'white';
+  var colors = 'white green red blue yellow'  
+  //must add new variable with all colors to be able to controle 
+  //all at once
+ 
+ 
 
-  $('.box').on('click', function() {
-    $(this).addClass('white');
-  })
-
-  $('.box').on('click', function() {
-    $(this).addClass('white');
-  })
+  $('.box').on('mouseover', function() {  
+    $(this).addClass(color); 
+   })
+  //to get mouseover to change color you must replace 'white' with the word color
+//change from click to mouseover allow you to just move mouse to select instead of clicking
+ 
 
   $('.box').on('dblclick', function() {
-    $(this).removeClass('white');
+    $(this).removeClass(color);
   })
 
     $('#reset').on('click', function() {
-    $('.box').removeClass('white')
+    $('.box').removeClass(colors)
   })
-
-   var color = 'white'  
 
 $('#red').on('click', function() {
     color = 'red';
@@ -44,28 +41,5 @@ $('#red').on('click', function() {
   $('#white').on('click', function() {
     color = 'white';
   })
-  
-$('.box').on('click', function() {
-    $(this).addClass(color);
-  })
 
-  $('.box').on('dblclick', function() {
-    $(this).removeClass(color);
-  })
-
-  $('#reset').on('click', function() {
-    $('.box').removeClass(color)
-  })
-
- $('.box').on('dblclick', function() {
-    $(this).removeClass(colors);
-  })
-
-  $('#reset').on('click', function() {
-    $('.box').removeClass(colors)
-  })
-
-
-
-
-  })
+ });
